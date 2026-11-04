@@ -1,0 +1,9 @@
+pdfplumber==0.11.10     # also installs pypdfium2, used to render scanned pages for OCR
+pytesseract==0.3.13     # also needs Tesseract itself: brew install tesseract
+pillow==13.0.0
+pandas==3.1.0
+scikit-learn==1.9.1
+openpyxl==3.1.5
+streamlit==1.66.1
+reportlab==5.1.0        # only for samples/generate_samples.py
+pytest==9.2.0

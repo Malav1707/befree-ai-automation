@@ -1,0 +1,37 @@
+{
+  "_comment": "Keyword rules for transaction classification. 'priority_rules' are checked first, top to bottom (they override merchant keywords, e.g. 'REFUND FROM AMAZON' -> Refund). Within 'rules' the longest matching keyword wins. 'fallback_rules' are used only when neither rules nor the ML model are confident. Keywords are matched as whole words on the lower-cased description.",
+
+  "priority_rules": {
+    "Refund & Cashback": ["refund", "reversal", "cashback", "chargeback", "rev"],
+    "Bank Charges": ["charges", "chrg", "chgs", "sms alert", "annual fee", "amc", "min bal", "penalty", "gst on", "service charge", "debit card fee", "ecs return"],
+    "Taxes": ["tds", "income tax", "gst payment", "advance tax", "challan", "tax"],
+    "Salary": ["salary", "sal", "payroll", "wages", "stipend"],
+    "Interest": ["interest", "int cr", "int pd", "sb int", "int.pd", "fd interest"]
+  },
+
+  "rules": {
+    "Food & Dining": ["swiggy", "zomato", "dominos", "domino", "pizza", "mcdonald", "mcdonalds", "kfc", "burger king", "starbucks", "cafe", "coffee", "restaurant", "dhaba", "eatery", "food", "uber eats", "eatsure", "haldiram", "barbeque"],
+    "Groceries": ["bigbasket", "big basket", "blinkit", "grofers", "zepto", "dmart", "d mart", "jiomart", "grocery", "supermarket", "kirana", "more retail", "reliance fresh", "nature basket", "instamart"],
+    "Shopping": ["amazon", "flipkart", "myntra", "ajio", "meesho", "nykaa", "tata cliq", "snapdeal", "lifestyle", "shoppers stop", "decathlon", "croma", "reliance digital", "ikea", "mall", "store"],
+    "Transport": ["uber", "ola", "rapido", "metro", "irctc", "railway", "fastag", "toll", "parking", "bus", "redbus", "cab", "taxi", "auto"],
+    "Fuel": ["petrol", "diesel", "fuel", "hpcl", "bpcl", "iocl", "indian oil", "bharat petroleum", "hp petrol", "shell"],
+    "Travel": ["makemytrip", "goibibo", "yatra", "cleartrip", "indigo", "air india", "vistara", "spicejet", "airlines", "hotel", "oyo", "airbnb", "booking com", "agoda"],
+    "Utilities & Bills": ["electricity", "bescom", "msedcl", "tata power", "adani electricity", "torrent power", "water bill", "gas bill", "indane", "bharat gas", "hp gas", "mahanagar gas", "broadband", "airtel", "jio", "vodafone", "vi recharge", "bsnl", "act fibernet", "dth", "tata play", "recharge", "bill payment", "billpay", "bbps", "postpaid", "prepaid"],
+    "Rent": ["rent", "house rent", "nobroker", "nestaway", "maintenance", "society"],
+    "EMI & Loans": ["emi", "loan", "nach", "ecs", "bajaj finance", "home loan", "car loan", "personal loan", "repayment"],
+    "Credit Card Payment": ["credit card", "cc payment", "card payment", "cred club", "cred", "ccpay"],
+    "Investments": ["mutual fund", "sip", "zerodha", "groww", "upstox", "kuvera", "coin", "nps", "ppf", "fixed deposit", "fd booking", "recurring deposit", "rd installment", "indian clearing corp", "nsdl", "cdsl", "smallcase", "angel one"],
+    "Insurance": ["insurance", "lic", "premium", "policy", "hdfc life", "icici pru", "star health", "max life", "policybazaar", "acko", "digit insurance"],
+    "Healthcare": ["hospital", "clinic", "pharmacy", "medical", "medicine", "apollo", "pharmeasy", "1mg", "netmeds", "practo", "diagnostic", "lab", "dental", "doctor"],
+    "Education": ["school", "college", "university", "tuition", "fees", "course", "udemy", "coursera", "byjus", "unacademy", "exam", "books"],
+    "Entertainment": ["netflix", "prime video", "hotstar", "spotify", "youtube", "bookmyshow", "pvr", "inox", "movie", "cinema", "gaming", "steam", "playstation", "zee5", "sonyliv"],
+    "Cash Withdrawal": ["atm", "atw", "cash withdrawal", "nwd", "self withdrawal", "cash wdl", "atm wdl"],
+    "Cash Deposit": ["cash deposit", "cash dep", "by cash", "cdm"],
+    "Personal Care": ["salon", "spa", "parlour", "urban company", "gym", "cult fit", "cultfit", "fitness"]
+  },
+
+  "fallback_rules": {
+    "Transfer": ["upi", "neft", "imps", "rtgs", "transfer", "trf", "fund transfer", "ft", "to self", "by transfer"],
+    "Cheque": ["chq", "cheque", "clg", "clearing"]
+  }
+}
